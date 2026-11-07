@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trailhead Car Finder</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 26 L11 12 L16 19 L21 9 L30 26 Z' fill='%23c4622d'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="app/styles.css?v=1794074826">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#garage">
+    <svg viewBox="0 0 32 32"><path d="M2 26 L11 12 L16 19 L21 9 L30 26 Z" fill="#c4622d"/><path d="M8.5 16 L11 12 L13.6 15.6" fill="none" stroke="#efe7da" stroke-width="1.6"/></svg>
+    Trailhead <small>car finder</small>
+  </a>
+  <nav class="nav">
+    <a href="#garage" data-route="garage">Garage</a>
+    <a href="#explore" data-route="explore">Explore</a>
+    <a href="#payments" data-route="payments">Payments</a>
+    <a href="#deals" data-route="deals">Deals</a>
+    <a href="#ev" data-route="ev">EV Leases</a>
+  </nav>
+  <div class="spacer"></div>
+  <span class="asof" id="asof"></span>
+  <div class="loc">📍 <b>Fort Collins, CO</b><span class="lbl">within</span>
+    <select id="radius" aria-label="Search radius"><option value="25">25 mi</option><option value="50">50 mi</option><option value="75">75 mi</option></select>
+  </div>
+  <button class="shortlist-btn" id="slBtn">★ Shortlist <span class="n" id="slCount">0</span></button>
+</header>
+
+<main>
+  <section class="view" id="v-garage" hidden></section>
+  <section class="view" id="v-explore" hidden></section>
+  <section class="view topo" id="v-payments" hidden></section>
+  <section class="view topo" id="v-deals" hidden></section>
+  <section class="view topo" id="v-ev" hidden></section>
+</main>
+
+<aside class="drawer" id="drawer"></aside>
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="data/data.js?v=1794074826"></script>
+<script src="app/finance.js?v=1794074826"></script>
+<script src="app/app.js?v=1794074826"></script>
+</body>
+</html>
